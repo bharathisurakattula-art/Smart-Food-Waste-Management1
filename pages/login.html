@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Smart Food Waste Management</title>
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div class="login-container">
+
+        <!-- Left Side -->
+
+        <div class="login-info">
+
+            <h1>Smart Food Waste Management</h1>
+
+            <p>
+                Reduce Food Waste.<br>
+                Feed People.<br>
+                Save the Environment.
+            </p>
+
+            <div class="info-text">
+
+                <h3>Welcome Back!</h3>
+
+                <p>
+                    Login to manage your food donations,
+                    volunteer activities and system services.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+
+        <div class="login-box">
+
+            <h2>Login</h2>
+
+            <p class="login-subtitle">
+                Login to your account
+            </p>
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+                <!-- Email -->
+
+                <label for="loginEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- Password -->
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <div class="password-container">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="show-password">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+
+                <!-- Role -->
+
+                <label for="loginRole">
+                    Login As
+                </label>
+
+                <select id="loginRole" required>
+
+                    <option value="">
+                        Select Role
+                    </option>
+
+                    <option value="donor">
+                        Donor
+                    </option>
+
+                    <option value="volunteer">
+                        Volunteer
+                    </option>
+
+                    <option value="admin">
+                        Admin
+                    </option>
+
+                </select>
+
+
+                <!-- Remember Me -->
+
+                <div class="remember-row">
+
+                    <label class="remember-label">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="login-button">
+
+                    Login
+
+                </button>
+
+
+                <!-- Login Message -->
+
+                <p
+                    id="loginMessage"
+                    class="login-message">
+                </p>
+
+            </form>
+
+
+            <!-- Register -->
+
+            <p class="register-text">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Register Now
+                </a>
+
+            </p>
+
+
+            <!-- Home -->
+
+            <a
+                href="../index.html"
+                class="home-link">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Login JavaScript -->
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

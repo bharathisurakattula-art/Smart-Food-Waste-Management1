@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Dashboard - Smart Food Waste Management</title>
+
+    <!-- Donor CSS -->
+    <link rel="stylesheet" href="../css/donor.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="donor-header">
+
+        <div>
+            <h1>Smart Food Waste Management</h1>
+            <p>Donor Dashboard</p>
+        </div>
+
+        <div class="donor-actions">
+            <a href="../index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN DASHBOARD ================= -->
+
+    <main class="donor-dashboard">
+
+        <section class="welcome-section">
+
+            <h2>Welcome, Donor!</h2>
+
+            <p>
+                Thank you for helping reduce food waste.
+                Donate your surplus food and help people in need.
+            </p>
+
+        </section>
+
+
+        <!-- ================= DONOR STATISTICS ================= -->
+
+        <section class="donor-statistics">
+
+            <div class="stat-card">
+
+                <h3>Total Donations</h3>
+
+                <p id="totalDonations">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Available Donations</h3>
+
+                <p id="availableDonations">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Completed Donations</h3>
+
+                <p id="completedDonations">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DONATE FOOD ================= -->
+
+        <section class="donor-section">
+
+            <h2>Donate Food</h2>
+
+            <p class="section-description">
+                Enter the details of the food you want to donate.
+            </p>
+
+
+            <form id="donorFoodForm">
+
+                <!-- Donor Name -->
+
+                <label for="donorName">
+                    Donor Name
+                </label>
+
+                <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <!-- Food Name -->
+
+                <label for="foodName">
+                    Food Name
+                </label>
+
+                <input
+                    type="text"
+                    id="foodName"
+                    placeholder="Example: Vegetable Rice"
+                    required
+                >
+
+
+                <!-- Food Type -->
+
+                <label for="foodType">
+                    Food Type
+                </label>
+
+                <select id="foodType" required>
+
+                    <option value="">
+                        Select Food Type
+                    </option>
+
+                    <option value="Cooked Food">
+                        Cooked Food
+                    </option>
+
+                    <option value="Packed Food">
+                        Packed Food
+                    </option>
+
+                    <option value="Fruits">
+                        Fruits
+                    </option>
+
+                    <option value="Vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="Bakery Items">
+                        Bakery Items
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <!-- Quantity -->
+
+                <label for="foodQuantity">
+                    Food Quantity
+                </label>
+
+                <input
+                    type="text"
+                    id="foodQuantity"
+                    placeholder="Example: 10 plates"
+                    required
+                >
+
+
+                <!-- Food Image -->
+
+                <label for="foodImage">
+                    Upload Food Image
+                </label>
+
+                <input
+                    type="file"
+                    id="foodImage"
+                    accept="image/*"
+                >
+
+
+                <!-- Location -->
+
+                <label for="foodLocation">
+                    Food Location
+                </label>
+
+                <input
+                    type="text"
+                    id="foodLocation"
+                    placeholder="Enter food pickup location"
+                    required
+                >
+
+
+                <!-- Map -->
+
+                <button
+                    type="button"
+                    class="map-button"
+                    onclick="openMap()">
+
+                    📍 Open Google Maps
+
+                </button>
+
+
+                <!-- Available Time -->
+
+                <label for="availableTime">
+                    Available From
+                </label>
+
+                <input
+                    type="time"
+                    id="availableTime"
+                    required
+                >
+
+
+                <!-- Expiry Time -->
+
+                <label for="expiryTime">
+                    Best Before / Expiry Time
+                </label>
+
+                <input
+                    type="time"
+                    id="expiryTime"
+                    required
+                >
+
+
+                <!-- Contact -->
+
+                <label for="contactNumber">
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="contactNumber"
+                    placeholder="Enter contact number"
+                    required
+                >
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="donate-button">
+
+                    Donate Food
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= MY DONATIONS ================= -->
+
+        <section class="donor-section">
+
+            <h2>My Donations</h2>
+
+            <p class="section-description">
+                View the food donations submitted by you.
+            </p>
+
+
+            <div
+                id="myDonations"
+                class="donation-list">
+
+                <div class="empty-message">
+
+                    <h3>No Donations Yet</h3>
+
+                    <p>
+                        Your submitted food donations
+                        will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DONATION GUIDELINES ================= -->
+
+        <section class="donor-section guidelines">
+
+            <h2>Food Donation Guidelines</h2>
+
+
+            <div class="guideline-container">
+
+                <div class="guideline-card">
+
+                    <h3>✓ Fresh Food</h3>
+
+                    <p>
+                        Please donate fresh and safe-to-eat food.
+                    </p>
+
+                </div>
+
+
+                <div class="guideline-card">
+
+                    <h3>✓ Proper Packing</h3>
+
+                    <p>
+                        Pack food properly to maintain hygiene.
+                    </p>
+
+                </div>
+
+
+                <div class="guideline-card">
+
+                    <h3>✓ Accurate Information</h3>
+
+                    <p>
+                        Provide correct quantity and location
+                        information.
+                    </p>
+
+                </div>
+
+
+                <div class="guideline-card">
+
+                    <h3>✓ Timely Donation</h3>
+
+                    <p>
+                        Mention the available and expiry time
+                        correctly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HELP ================= -->
+
+        <section class="help-section">
+
+            <h2>Need Help?</h2>
+
+            <p>
+                If you have any problem with your donation,
+                please contact the project administrator.
+            </p>
+
+            <a
+                href="../index.html#contact"
+                class="contact-button">
+
+                Contact Admin
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Smart Food Waste Management
+        </p>
+
+        <p>
+            Donor Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- Donor JavaScript -->
+
+    <script src="../js/donor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Food Waste Management</title>
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header id="home">
+
+        <div class="hero-text">
+            <h1>Smart Food Waste Management</h1>
+            <p>Reduce Food Waste • Feed People • Protect the Environment</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#donate">Donate Food</a>
+            <a href="#volunteer">Volunteer</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#status">Status</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+
+            <!-- Login / Register -->
+            <a href="pages/login.html">Login</a>
+            <a href="pages/register.html">Register</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+
+        <img src="images/food-waste.jpg"
+             alt="Food Waste Management">
+
+        <div class="hero-content">
+            <h2>Let's Stop Food Waste Together</h2>
+
+            <p>
+                Connect surplus food with people who need it.
+                Our Smart Food Waste Management system helps
+                reduce food waste and support the community.
+            </p>
+
+            <a href="#donate" class="learn-btn">
+                Donate Food
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+
+        <h2>About Our Project</h2>
+
+        <p>
+            Smart Food Waste Management is a platform designed
+            to reduce food wastage by connecting food donors,
+            volunteers and people who need food.
+        </p>
+
+        <p>
+            The system allows users to donate excess food,
+            volunteers to collect and deliver food, and
+            administrators to manage the complete system.
+        </p>
+
+    </section>
+
+
+    <!-- ================= PROJECT INFORMATION ================= -->
+    <section class="project-info">
+
+        <h2>Project Information</h2>
+
+        <div class="waste-box">
+
+            <h3>Our Mission</h3>
+
+            <p>
+                To reduce food waste and make surplus food
+                available to people who need it.
+            </p>
+
+        </div>
+
+
+        <div class="waste-box">
+
+            <h3>Our Vision</h3>
+
+            <p>
+                A society where no usable food is wasted and
+                everyone has access to food.
+            </p>
+
+        </div>
+
+
+        <div class="waste-box">
+
+            <h3>Our Goal</h3>
+
+            <p>
+                Build a smart digital platform that connects
+                donors, volunteers and beneficiaries.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DONATE FOOD ================= -->
+    <section id="donate">
+
+        <h2>Donate Food</h2>
+
+        <p>
+            Have extra food? Donate it to someone who needs it.
+        </p>
+
+        <form id="foodForm">
+
+            <input
+                type="text"
+                id="donorName"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="foodName"
+                placeholder="Food Name"
+                required
+            >
+
+            <select id="foodType" required>
+
+                <option value="">
+                    Select Food Type
+                </option>
+
+                <option value="Cooked Food">
+                    Cooked Food
+                </option>
+
+                <option value="Packed Food">
+                    Packed Food
+                </option>
+
+                <option value="Fruits">
+                    Fruits
+                </option>
+
+                <option value="Vegetables">
+                    Vegetables
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="foodQuantity"
+                placeholder="Food Quantity"
+                required
+            >
+
+
+            <label for="foodImage">
+                Upload Food Image
+            </label>
+
+            <input
+                type="file"
+                id="foodImage"
+                accept="image/*"
+            >
+
+
+            <input
+                type="text"
+                id="foodLocation"
+                placeholder="Food Location"
+                required
+            >
+
+
+            <input
+                type="time"
+                id="availableTime"
+                required
+            >
+
+
+            <input
+                type="time"
+                id="expiryTime"
+                required
+            >
+
+
+            <input
+                type="tel"
+                id="contactNumber"
+                placeholder="Contact Number"
+                required
+            >
+
+
+            <button type="button" onclick="openMap()">
+                Select Location on Google Maps
+            </button>
+
+
+            <button type="submit">
+                Donate Food
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= AVAILABLE FOOD ================= -->
+    <section id="status">
+
+        <h2>Available Food</h2>
+
+        <p>
+            Available food donations will appear here.
+        </p>
+
+        <div id="requestList">
+
+            <!-- Food donations will be added using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VOLUNTEER ================= -->
+    <section id="volunteer">
+
+        <h2>Become a Volunteer</h2>
+
+        <p>
+            Help collect and deliver donated food to people
+            who need it.
+        </p>
+
+
+        <form id="volunteerForm">
+
+            <input
+                type="text"
+                id="volunteerName"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <input
+                type="email"
+                id="volunteerEmail"
+                placeholder="Email Address"
+                required
+            >
+
+
+            <input
+                type="tel"
+                id="volunteerPhone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <input
+                type="text"
+                id="volunteerLocation"
+                placeholder="Your Location"
+                required
+            >
+
+
+            <button type="submit">
+                Register as Volunteer
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section id="how-it-works">
+
+        <h2>How It Works</h2>
+
+
+        <div class="process-container">
+
+            <div class="waste-box">
+
+                <h3>1. Donate</h3>
+
+                <p>
+                    Donors register and upload information
+                    about their surplus food.
+                </p>
+
+            </div>
+
+
+            <div class="waste-box">
+
+                <h3>2. Find</h3>
+
+                <p>
+                    Volunteers can view available food
+                    donations near them.
+                </p>
+
+            </div>
+
+
+            <div class="waste-box">
+
+                <h3>3. Collect</h3>
+
+                <p>
+                    Volunteers collect the donated food.
+                </p>
+
+            </div>
+
+
+            <div class="waste-box">
+
+                <h3>4. Deliver</h3>
+
+                <p>
+                    Food is delivered to people or organizations
+                    who need it.
+                </p>
+
+            </div>
+
+
+            <div class="waste-box">
+
+                <h3>5. Reduce Waste</h3>
+
+                <p>
+                    Usable food is saved instead of being
+                    thrown away.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TEAM ================= -->
+    <section id="team">
+
+        <h2>Our Team</h2>
+
+
+        <div class="team-container">
+
+            <div class="team-card">
+
+                <h3>Project Team</h3>
+
+                <p>
+                    Smart Food Waste Management
+                </p>
+
+                <p>
+                    BTech Computer Science & Engineering
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Have questions or suggestions?
+            Contact our team.
+        </p>
+
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+                required
+            >
+
+
+            <textarea
+                id="contactMessage"
+                placeholder="Your Message"
+                rows="5"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            © 2026 Smart Food Waste Management
+        </p>
+
+        <p>
+            Reduce Waste • Feed People • Save Environment
+        </p>
+
+    </footer>
+
+
+    <!-- ================= BUTTONS ================= -->
+
+    <button
+        class="top-button"
+        onclick="goTop()"
+        title="Go to Top">
+        ↑
+    </button>
+
+
+    <button
+        class="dark-button"
+        onclick="darkMode()"
+        title="Dark Mode">
+        🌙
+    </button>
+
+
+    <!-- Home Page JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

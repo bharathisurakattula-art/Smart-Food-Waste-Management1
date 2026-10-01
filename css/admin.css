@@ -1,0 +1,351 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+.admin-header {
+    background: #1b5e20;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+}
+
+.admin-header p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-actions a {
+    color: white;
+    text-decoration: none;
+    background: #2e7d32;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+.admin-actions a:hover {
+    background: white;
+    color: #1b5e20;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.dashboard > h2 {
+    color: #1b5e20;
+    font-size: 32px;
+}
+
+.welcome {
+    margin: 10px 0 30px;
+    color: #555;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: #1b5e20;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/* ================= ADMIN SECTIONS ================= */
+
+.admin-section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-section h2 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+table th {
+    background: #1b5e20;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+table td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f1f8f1;
+}
+
+
+/* ================= TABLE BUTTONS ================= */
+
+.approve-btn,
+.reject-btn,
+.delete-btn {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    color: white;
+}
+
+.approve-btn {
+    background: #2e7d32;
+}
+
+.reject-btn {
+    background: #f57c00;
+}
+
+.delete-btn {
+    background: #c62828;
+}
+
+.approve-btn:hover {
+    background: #1b5e20;
+}
+
+.reject-btn:hover {
+    background: #e65100;
+}
+
+.delete-btn:hover {
+    background: #8e0000;
+}
+
+
+/* ================= USER CARDS ================= */
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.user-card {
+    background: #e8f5e9;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.user-card h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.user-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+
+/* ================= REPORT ================= */
+
+.report-box {
+    background: #f5faf5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.report-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.report-stats div {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.report-stats strong {
+    display: block;
+    font-size: 30px;
+    color: #1b5e20;
+}
+
+.report-stats span {
+    color: #555;
+}
+
+
+/* ================= MESSAGE FORM ================= */
+
+#adminMessageForm {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+#adminMessage {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#adminMessage:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+#adminMessageForm button {
+    margin-top: 12px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#adminMessageForm button:hover {
+    background: #1b5e20;
+}
+
+#messageResult {
+    margin-top: 15px;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .report-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-header h1 {
+        font-size: 23px;
+    }
+
+    .admin-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        width: 94%;
+    }
+
+    .admin-section {
+        padding: 20px;
+    }
+}

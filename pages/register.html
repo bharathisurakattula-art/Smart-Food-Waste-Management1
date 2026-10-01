@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Smart Food Waste Management</title>
+
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <!-- LEFT SIDE -->
+        <div class="register-info">
+
+            <h1>Smart Food Waste Management</h1>
+
+            <p>
+                Share Food.<br>
+                Help People.<br>
+                Reduce Food Waste.
+            </p>
+
+            <div class="info-box">
+
+                <h3>Join Our Community</h3>
+
+                <p>
+                    Register as a donor or volunteer and
+                    become part of our food redistribution
+                    community.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- REGISTER BOX -->
+        <div class="register-box">
+
+            <h2>Create Account</h2>
+
+            <p class="register-subtitle">
+                Register for Smart Food Waste Management
+            </p>
+
+
+            <form id="registerForm">
+
+                <!-- FULL NAME -->
+                <label for="registerName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+                <label for="registerEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- PHONE -->
+                <label for="registerPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="registerPhone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+
+                <!-- ROLE -->
+                <label for="registerRole">
+                    Register As
+                </label>
+
+                <select id="registerRole" required>
+
+                    <option value="">
+                        Select Role
+                    </option>
+
+                    <option value="donor">
+                        Donor
+                    </option>
+
+                    <option value="volunteer">
+                        Volunteer
+                    </option>
+
+                </select>
+
+
+                <!-- PASSWORD -->
+                <label for="registerPassword">
+                    Password
+                </label>
+
+                <div class="password-container">
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="show-password"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <div class="password-container">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleConfirmPassword"
+                        class="show-password"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+
+                <!-- TERMS -->
+                <div class="terms-row">
+
+                    <label class="terms-label">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#" id="termsLink">
+                                Terms & Conditions
+                            </a>
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    Create Account
+                </button>
+
+
+                <!-- MESSAGE -->
+                <p
+                    id="registerMessage"
+                    class="register-message"
+                ></p>
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+            <p class="login-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login Now
+                </a>
+
+            </p>
+
+
+            <!-- HOME -->
+            <a
+                href="../index.html"
+                class="home-link"
+            >
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>

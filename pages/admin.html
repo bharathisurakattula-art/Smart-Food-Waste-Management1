@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Smart Food Waste Management</title>
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="admin-header">
+
+        <div>
+            <h1>Smart Food Waste Management</h1>
+            <p>Admin Dashboard</p>
+        </div>
+
+        <div class="admin-actions">
+            <a href="../index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+        <h2>Admin Dashboard</h2>
+
+        <p class="welcome">
+            Welcome, Admin! Manage the food donations,
+            volunteers and users from this dashboard.
+        </p>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h3>Total Donations</h3>
+                <p id="totalDonations">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Available Food</h3>
+                <p id="availableFood">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Volunteers</h3>
+                <p id="totalVolunteers">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Food Delivered</h3>
+                <p id="foodDelivered">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= DONATIONS ================= -->
+
+        <section class="admin-section">
+
+            <h2>Food Donations</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Donor</th>
+                            <th>Food</th>
+                            <th>Quantity</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="donationTable">
+
+                        <tr>
+
+                            <td colspan="6">
+                                No donations available
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VOLUNTEERS ================= -->
+
+        <section class="admin-section">
+
+            <h2>Volunteer Management</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="volunteerTable">
+
+                        <tr>
+
+                            <td colspan="6">
+                                No volunteers registered
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= USER MANAGEMENT ================= -->
+
+        <section class="admin-section">
+
+            <h2>User Management</h2>
+
+            <div class="user-cards">
+
+                <div class="user-card">
+
+                    <h3>Donors</h3>
+
+                    <p id="donorCount">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="user-card">
+
+                    <h3>Volunteers</h3>
+
+                    <p id="volunteerCount">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="user-card">
+
+                    <h3>Administrators</h3>
+
+                    <p id="adminCount">
+                        1
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORT ================= -->
+
+        <section class="admin-section">
+
+            <h2>Food Waste Report</h2>
+
+            <div class="report-box">
+
+                <p>
+                    Monitor the amount of food donated and
+                    delivered through the system.
+                </p>
+
+                <div class="report-stats">
+
+                    <div>
+                        <strong id="foodSaved">
+                            0
+                        </strong>
+
+                        <span>
+                            Food Donations
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="peopleHelped">
+                            0
+                        </strong>
+
+                        <span>
+                            People Helped
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong id="activeVolunteers">
+                            0
+                        </strong>
+
+                        <span>
+                            Active Volunteers
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADMIN MESSAGE ================= -->
+
+        <section class="admin-section">
+
+            <h2>System Message</h2>
+
+            <form id="adminMessageForm">
+
+                <textarea
+                    id="adminMessage"
+                    rows="5"
+                    placeholder="Enter a message for users..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p id="messageResult"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Smart Food Waste Management
+        </p>
+
+        <p>
+            Admin Panel
+        </p>
+
+    </footer>
+
+
+    <!-- Admin JavaScript -->
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

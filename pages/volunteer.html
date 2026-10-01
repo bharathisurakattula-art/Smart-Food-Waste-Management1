@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volunteer - Smart Food Waste Management</title>
+
+    <link rel="stylesheet" href="../css/volunteer.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="volunteer-header">
+
+        <div class="logo">
+            Smart Food Waste Management
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#process">How It Works</a>
+            <a href="login.html">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <!-- WELCOME -->
+    <section class="welcome-section">
+
+        <div>
+            <h1>Welcome, Volunteer! 🤝</h1>
+
+            <p>
+                Help collect surplus food and deliver it
+                to people who need it.
+            </p>
+        </div>
+
+        <div class="volunteer-badge">
+            Volunteer
+        </div>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+    <section class="statistics-section">
+
+        <div class="stat-card">
+            <h3 id="availableCount">0</h3>
+            <p>Available Food</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="acceptedCount">0</h3>
+            <p>Accepted Donations</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="deliveredCount">0</h3>
+            <p>Food Delivered</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="peopleHelped">0</h3>
+            <p>People Helped</p>
+        </div>
+
+    </section>
+
+
+    <!-- AVAILABLE FOOD -->
+    <section class="food-section">
+
+        <h2>Available Food Donations</h2>
+
+        <p class="section-description">
+            Find nearby food donations and accept a
+            collection request.
+        </p>
+
+
+        <div id="foodList" class="food-list">
+
+            <!-- Food cards will be added using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ACCEPTED DONATIONS -->
+    <section class="accepted-section">
+
+        <h2>My Accepted Donations</h2>
+
+        <div id="acceptedList" class="accepted-list">
+
+            <!-- Accepted donations will appear here -->
+
+        </div>
+
+    </section>
+
+
+    <!-- VOLUNTEER GUIDELINES -->
+    <section class="guidelines-section">
+
+        <h2>Volunteer Guidelines</h2>
+
+        <div class="guidelines-grid">
+
+            <div class="guideline-card">
+                <span>🍱</span>
+                <h3>Check Food</h3>
+                <p>
+                    Make sure the donated food is safe
+                    and suitable for consumption.
+                </p>
+            </div>
+
+            <div class="guideline-card">
+                <span>📍</span>
+                <h3>Collect Food</h3>
+                <p>
+                    Visit the pickup location and
+                    collect the donated food.
+                </p>
+            </div>
+
+            <div class="guideline-card">
+                <span>🚚</span>
+                <h3>Deliver Food</h3>
+                <p>
+                    Deliver the food to people in need
+                    or registered organizations.
+                </p>
+            </div>
+
+            <div class="guideline-card">
+                <span>❤️</span>
+                <h3>Help People</h3>
+                <p>
+                    Your contribution helps reduce food
+                    waste and support the community.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="help-section">
+
+        <h2>Need Help?</h2>
+
+        <p>
+            If you face any problem while collecting
+            or delivering food, contact the administrator.
+        </p>
+
+        <button onclick="contactAdmin()">
+            Contact Admin
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Smart Food Waste Management |
+            Together We Can Reduce Food Waste
+        </p>
+
+    </footer>
+
+
+    <script src="../js/volunteer.js"></script>
+
+</body>
+
+</html>

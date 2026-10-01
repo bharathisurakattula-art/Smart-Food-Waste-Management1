@@ -1,0 +1,405 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: white;
+    color: #1b5e20;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 8%;
+    background: white;
+}
+
+.hero img {
+    width: 45%;
+    max-width: 550px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+/* ================= BUTTON ================= */
+
+button,
+.learn-btn {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.learn-btn:hover {
+    background: #1b5e20;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #1b5e20;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 900px;
+    margin: 10px auto;
+}
+
+
+/* ================= PROJECT INFORMATION ================= */
+
+.project-info {
+    background: #e8f5e9;
+}
+
+.waste-box {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 850px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.waste-box h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+
+/* ================= FORMS ================= */
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form button {
+    margin-top: 15px;
+}
+
+
+/* ================= AVAILABLE FOOD ================= */
+
+#requestList {
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.food-request {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.food-request h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.food-request img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.process-container .waste-box {
+    margin: 0;
+}
+
+
+/* ================= TEAM ================= */
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-card h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+
+/* ================= CONTACT ================= */
+
+#contact {
+    background: #e8f5e9;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ================= TOP BUTTON ================= */
+
+.top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 75px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 0;
+}
+
+
+/* ================= DARK MODE BUTTON ================= */
+
+.dark-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 0;
+}
+
+
+/* ================= DARK MODE ================= */
+
+.dark-mode {
+    background: #121212;
+    color: #eeeeee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background: #0b3d0b;
+}
+
+.dark-mode .hero,
+.dark-mode form,
+.dark-mode .waste-box,
+.dark-mode .team-card,
+.dark-mode .food-request {
+    background: #1e1e1e;
+    color: #eeeeee;
+}
+
+.dark-mode section {
+    background: #121212;
+}
+
+.dark-mode .project-info,
+.dark-mode #contact {
+    background: #181818;
+}
+
+.dark-mode section h2,
+.dark-mode .hero-content h2,
+.dark-mode .waste-box h3,
+.dark-mode .team-card h3,
+.dark-mode .food-request h3 {
+    color: #66bb6a;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        padding: 35px 5%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 26px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 90%;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .food-request img {
+        width: 100%;
+        height: auto;
+    }
+}
